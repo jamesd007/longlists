@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import * as faker from "faker";
+// import * as faker from "faker";
+import Chance from 'chance';
 import { FixedSizeList as List } from "react-window";
 
 const GenList = () => {
     
     const [data, setData] = useState(() =>
-      Array.from({ length: 10000 }, faker.address.city)
+      Array.from({ length: 10000 }, chance.city)
     );
 
     const reverse = () => {
